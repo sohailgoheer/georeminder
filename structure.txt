@@ -1,0 +1,60 @@
+GeoReminder/
+├── __init__.py
+├── georeminder.py
+├── georeminder_dialog.py
+├── georeminder_panel.py
+├── db_manager.py
+├── resources.qrc
+├── metadata.txt
+├── icons/
+│   └── georeminder_icon.png (placeholder abhi)
+└── README.md
+
+
+
+-------------------------------------------
+✅ PROJECT NAME: GeoReminder
+✅ PLUGIN TYPE: Python (PyQt + QGIS API)
+✅ SCOPE: Location-based reminders inside QGIS
+📜 Step-by-Step Development Roadmap
+Phase 0: Project Initialization ✅
+Step	Task
+0.1	Create plugin skeleton (using Plugin Builder 3 or manually).
+0.2	Plugin Metadata: Name, Author, Description, Version, Icon.
+0.3	Setup plugin files: __init__.py, metadata.txt, georeminder.py, resources.qrc.
+0.4	Add plugin icon + menu entry ("GeoReminder" tab in Plugins menu).
+0.5	Test load/unload in QGIS Plugin Manager.
+
+Phase 1: Add Reminder Feature 🟡
+Step	Task
+1.1	Add "Add GeoReminder" option in Layer → Feature right-click context menu.
+1.2	Open a PyQt5 dialog: reminder message + date/time picker.
+1.3	Store: Feature ID, Layer ID, Reminder Message, Reminder Date/Time in SQLite database.
+1.4	Create SQLite logic for save/load. (reminders.db file in plugin data folder.)
+1.5	Unit test: Add + save + load.
+
+Phase 2: Show Reminder Notifications 🟢
+Step	Task
+2.1	Add a timer in the plugin → check every minute for due reminders.
+2.2	Show QGIS popup when a reminder time is reached.
+2.3	Bonus: System tray notification support (optional).
+2.4	Auto-remove or mark completed reminders.
+
+Phase 3: Reminder List Panel 🟢
+Step	Task
+3.1	Create a dockable panel (left/right side) called "GeoReminder Panel".
+3.2	List all active reminders (feature ID, layer name, message, time).
+3.3	Add buttons: Edit, Delete, Refresh.
+3.4	Double-click on reminder → Zoom to feature.
+
+Phase 4: Map Filter + Search 🟢
+Step	Task
+4.1	Add map extent filter → sirf current map ke andar ke reminders dikhao.
+4.2	Add text search box (search by reminder message / feature ID).
+4.3	Polish the reminder list layout.
+
+Phase 5: Save/Load & Cleanup ✅
+Step	Task
+5.1	Ensure reminders save even if QGIS is closed.
+5.2	Reminders load automatically when project open ho.
+5.3	Add Clear All Reminders option.

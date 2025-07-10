@@ -1,0 +1,19 @@
+[general]
+name=GeoReminder
+qgisMinimumVersion=3.22
+qgisMaximumVersion=3.42
+description=Add spatial reminders to your map features and get notified on time.
+version=1.0.0
+author=Muhammad Sohail Akbar
+email=sohailgoheer@gmail.com
+about=GeoReminder lets you attach reminders to selected features on the QGIS map canvas and get notified at your chosen date/time. Supports zooming to the features and extending reminders.
+category=Vector
+icon=icons/georeminder_icon.png
+homepage=https://www.gisschools.com/
+repository=https://github.com/your-repo/georeminder
+tracker=https://github.com/your-repo/georeminder/issues
+tags=reminder,notifications,spatial,gis,qgis,productivity,alert
+experimental=False
+
+[help]
+changelog=Initial release: supports adding reminders to selected features with notifications, zoom, and extend options.
